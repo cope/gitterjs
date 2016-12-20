@@ -100,8 +100,7 @@ var gitterjs = {
 	all: function () {
 		var self = this;
 
-		// var gits = _.uniq(this.find(process.cwd()));
-		var gits = _.uniq(this.find('D:/Bitbucket'));
+		var gits = _.uniq(this.find(process.cwd()));
 
 		var commands = ['git remote prune origin'];
 		if (commander.pull) {
