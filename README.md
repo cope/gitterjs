@@ -1,0 +1,2 @@
+# gitterjs
+Little git helper
