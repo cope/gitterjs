@@ -25,7 +25,7 @@ var spawn = require('child_process').spawn;
 var execSync = require('child_process').execSync;
 
 commander
-.version('0.0.2')
+.version('0.0.3')
 .option('', '')
 .option('-l, --pull', 'Execute git pull recursively in all subfolders', false)
 .option('-c, --commit', 'Execute git commit recursively in all subfolders', false)
