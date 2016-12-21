@@ -25,15 +25,15 @@ var spawn = require('child_process').spawn;
 var execSync = require('child_process').execSync;
 
 commander
-	.version('0.0.1')
-	.option('', '')
-	.option('-l, --pull', 'Execute git pull recursively in all subfolders', false)
-	.option('-c, --commit', 'Execute git commit recursively in all subfolders', false)
-	.option('-p, --push', 'Execute git commit and push recursively in all subfolders', false)
-	.option('', '')
-	.option('<no params>', 'Same as using -l:')
-	.option('', 'Execute git pull recursively in all subfolders')
-	.parse(process.argv);
+.version('0.0.1')
+.option('', '')
+.option('-l, --pull', 'Execute git pull recursively in all subfolders', false)
+.option('-c, --commit', 'Execute git commit recursively in all subfolders', false)
+.option('-p, --push', 'Execute git commit and push recursively in all subfolders', false)
+.option('', '')
+.option('<no params>', 'Same as using -l:')
+.option('', 'Execute git pull recursively in all subfolders')
+.parse(process.argv);
 
 commander.pull = true === commander.pull;
 commander.commit = true === commander.commit;
@@ -112,10 +112,13 @@ var gitterjs = {
 		}
 		if (commander.push) {
 			if (commander.commit) {
+				commands.push('git pull');
 				commands.push('git push');
 			} else {
 				commands.push('git add .');
 				commands.push('git commit -a -m "gitterjs autocommit ' + moment().format("YYYY-MM-DD HH:mm:ss") + '"');
+				commands.push('git pull');
+				commands.push('git config --global push.default matching');
 				commands.push('git push');
 			}
 		}
