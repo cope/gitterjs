@@ -35,6 +35,7 @@ commander
 .option('', 'Execute git pull recursively in all subfolders')
 .parse(process.argv);
 
+
 commander.pull = true === commander.pull;
 commander.commit = true === commander.commit;
 commander.push = true === commander.push;
