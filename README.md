@@ -1,5 +1,5 @@
 # gitterjs
-Little git helper
+Shortcut for recursive git pull/commit/push
 
 ## Install:
     npm i -g gitterjs
