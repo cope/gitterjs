@@ -1,4 +1,6 @@
 # gitterjs
+
+[![Join the chat at https://gitter.im/cope/gitterjs](https://badges.gitter.im/cope/gitterjs.svg)](https://gitter.im/cope/gitterjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Shortcut for recursive git pull/commit/push
 
 ## Install:
