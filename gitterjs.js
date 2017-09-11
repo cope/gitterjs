@@ -6,12 +6,14 @@
  * @author: Predrag Stojadinovic <predrag@stojadinovic.net>
  *
  * Usage:
- * -l, --pull        Execute git pull recursively in all subfolders
- * -c, --commit      Execute git commit recursively in all subfolders
- * -p, --push        Execute git commit and push recursively in all subfolders
+ * -l, --pull             Execute git pull recursively in all subfolders
+ * -c, --commit           Execute git commit recursively in all subfolders
+ * -p, --push             Execute git commit and push recursively in all subfolders
+ * -m, --message [value]  An optional message
+ * -v, --verbose          Verbose
  *
- * <no params>       Same as using -l:
- *                   Execute git pull recursively in all subfolders
+ * <no params>            Same as using -l:
+ *                        Execute git pull recursively in all subfolders
  */
 
 var fs = require('fs');
@@ -25,15 +27,17 @@ var spawn = require('child_process').spawn;
 var execSync = require('child_process').execSync;
 
 commander
-.version('0.0.4')
-.option('', '')
-.option('-l, --pull', 'Execute git pull recursively in all subfolders', false)
-.option('-c, --commit', 'Execute git commit recursively in all subfolders', false)
-.option('-p, --push', 'Execute git commit and push recursively in all subfolders', false)
-.option('', '')
-.option('<no params>', 'Same as using -l:')
-.option('', 'Execute git pull recursively in all subfolders')
-.parse(process.argv);
+	.version('0.0.5')
+	.option('', '')
+	.option('-l, --pull', 'Execute git pull recursively in all subfolders', false)
+	.option('-c, --commit', 'Execute git commit recursively in all subfolders', false)
+	.option('-p, --push', 'Execute git commit and push recursively in all subfolders', false)
+	.option('-m, --message [value]', 'An optional message')
+	.option('-v, --verbose', 'Verbose')
+	.option('', '')
+	.option('<no params>', 'Same as using -l:')
+	.option('', 'Execute git pull recursively in all subfolders')
+	.parse(process.argv);
 
 commander.pull = true === commander.pull;
 commander.commit = true === commander.commit;
@@ -42,11 +46,6 @@ commander.push = true === commander.push;
 if (!commander.commit && !commander.push) {
 	commander.pull = true;
 }
-
-// commander debug:
-// console.log('commander.pull: ' + commander.pull);
-// console.log('commander.commit: ' + commander.commit);
-// console.log('commander.push: ' + commander.push);
 
 var gitterjs = {
 
@@ -102,21 +101,21 @@ var gitterjs = {
 
 		var gits = _.uniq(this.find(process.cwd()));
 
-		var commands = ['git remote prune origin'];
+		var commands = [
+			'git remote prune origin',
+			'git fetch --prune'
+		];
+
 		if (commander.pull) {
 			commands.push('git pull');
-		}
-		if (commander.commit) {
+
+		} else {
+			var message = commander.message || 'gitterjs autocommit ' + moment().format("YYYY-MM-DD HH:mm:ss");
+
 			commands.push('git add .');
-			commands.push('git commit -a -m "gitterjs autocommit ' + moment().format("YYYY-MM-DD HH:mm:ss") + '"');
-		}
-		if (commander.push) {
-			if (commander.commit) {
-				commands.push('git pull');
-				commands.push('git push');
-			} else {
-				commands.push('git add .');
-				commands.push('git commit -a -m "gitterjs autocommit ' + moment().format("YYYY-MM-DD HH:mm:ss") + '"');
+			commands.push('git commit -a -m "' + message + '"');
+
+			if (commander.push) {
 				commands.push('git pull');
 				commands.push('git config --global push.default matching');
 				commands.push('git push');
@@ -126,6 +125,7 @@ var gitterjs = {
 		_.forEach(gits, function (dir) {
 			self.goto(dir, true);
 			_.forEach(commands, function (command) {
+				commander.verbose && console.log(command);
 				self.execute(command);
 			});
 		});

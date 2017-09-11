@@ -7,15 +7,17 @@ Shortcut for recursive git pull/commit/push
     npm i -g gitterjs
 
 ## Options:
-    -h, --help       output usage information
-    -V, --version    output the version number
+    -h, --help             output usage information
+    -V, --version          output the version number
 
-    -l, --pull       Execute git pull recursively in all subfolders
-    -c, --commit     Execute git commit recursively in all subfolders
-    -p, --push       Execute git commit and push recursively in all subfolders
+    -l, --pull             Execute git pull recursively in all subfolders
+    -c, --commit           Execute git commit recursively in all subfolders
+    -p, --push             Execute git commit and push recursively in all subfolders
+    -m, --message [value]  An optional message
+    -v, --verbose          Verbose
 
-    <no params>      Same as using -l:
-                     Execute git pull recursively in all subfolders
+    <no params>            Same as using -l:
+                           Execute git pull recursively in all subfolders
 
 ## Usage:
     > gitter
