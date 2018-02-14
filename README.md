@@ -1,4 +1,4 @@
-# gitterjs
+# gitterjs [![Build Status](https://travis-ci.org/cope/gitterjs.svg?branch=master)](https://travis-ci.org/cope/gitterjs)
 
 [![Join the chat at https://gitter.im/cope/gitterjs](https://badges.gitter.im/cope/gitterjs.svg)](https://gitter.im/cope/gitterjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Shortcut for recursive git pull/commit/push
