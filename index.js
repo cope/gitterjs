@@ -19,7 +19,7 @@
 var commander = require('commander');
 
 commander
-	.version('0.1.0')
+	.version('0.1.1')
 	.option('', '')
 	.option('-l, --pull', 'Execute git pull recursively in all subfolders', false)
 	.option('-c, --commit', 'Execute git commit recursively in all subfolders', false)
