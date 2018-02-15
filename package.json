@@ -1,6 +1,6 @@
 {
 	"name": "gitterjs",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Little git helper",
 	"homepage": "https://github.com/cope/gitterjs#readme",
 	"author": "Predrag Stojadinovic <predrag@stojadinovic.net>",
@@ -28,7 +28,7 @@
 		"commander": "^2.9.0",
 		"lodash": "^4.17.2",
 		"moment": "^2.17.1",
-		"node-cmd": "^1.2.0"
+		"node-cmd": "^3.0.0"
 	},
 	"devDependencies": {
 		"chai": "^4.1.2",
