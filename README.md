@@ -1,4 +1,7 @@
-# gitterjs [![Build Status](https://travis-ci.org/cope/gitterjs.svg?branch=master)](https://travis-ci.org/cope/gitterjs)
+# gitterjs
+[![Build Status](https://travis-ci.org/cope/gitterjs.svg?branch=master)](https://travis-ci.org/cope/gitterjs)
+[![coverage](https://coveralls.io/repos/github/cope/gitterjs/badge.svg?branch=master)](https://coveralls.io/github/cope/gitterjs?branch=master)
+[![npm](https://img.shields.io/npm/dt/gitterjs.svg)](https://www.npmjs.com/package/gitterjs)
 
 [![Join the chat at https://gitter.im/cope/gitterjs](https://badges.gitter.im/cope/gitterjs.svg)](https://gitter.im/cope/gitterjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Shortcut for recursive git pull/commit/push
