@@ -1,14 +1,14 @@
-const _ = require('lodash');
-const expect = require("chai").expect;
+var _ = require("lodash");
+var expect = require("chai").expect;
 
-const gitterjs = require("../lib/gitterjs");
+var gitterjs = require("../lib/gitterjs");
 
 describe("gitterjs tests", function () {
-	it('gitterjs should exist', function () {
+	it("gitterjs should exist", function () {
 		expect(gitterjs).to.exist;
 	});
 
-	it('gitterjs.run should exist', function () {
+	it("gitterjs.run should exist", function () {
 		expect(gitterjs.run).to.exist;
 	});
 
