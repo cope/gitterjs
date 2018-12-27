@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 "use strict";
 
 /**
@@ -16,7 +15,7 @@
  *                        Execute git pull recursively in all subfolders
  */
 
-var commander = require("commander");
+const commander = require("commander");
 
 commander
 	.version("0.1.2")
@@ -37,5 +36,5 @@ commander.push = true === commander.push;
 
 if (!commander.commit && !commander.push) commander.pull = true;
 
-var gitterjs = require("./lib/gitterjs");
+const gitterjs = require("./lib/gitterjs");
 gitterjs.run(commander);
