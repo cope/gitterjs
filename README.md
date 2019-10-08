@@ -5,7 +5,7 @@
 [![dependencies](https://david-dm.org/cope/gitterjs.svg)](https://www.npmjs.com/package/gitterjs)
 [![npm](https://img.shields.io/npm/dt/gitterjs.svg)](https://www.npmjs.com/package/gitterjs)
 
-[![Join the chat at https://gitter.im/cope/gitterjs](https://badges.gitter.im/cope/gitterjs.svg)](https://gitter.im/cope/gitterjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/cope/gitterjs](https://badges.gitter.im/cope/gitterjs.svg)](https://gitter.im/cope/gitterjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Greenkeeper badge](https://badges.greenkeeper.io/cope/gitterjs.svg)](https://greenkeeper.io/)
 Shortcut for recursive git pull/commit/push
 
 ## Install:
