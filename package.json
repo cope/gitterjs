@@ -1,6 +1,6 @@
 {
 	"name": "gitterjs",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"description": "Little git helper",
 	"homepage": "https://github.com/cope/gitterjs#readme",
 	"author": "Predrag Stojadinovic <predrag@stojadinovic.net>",
@@ -26,17 +26,17 @@
 		"gitter": "index.js"
 	},
 	"dependencies": {
-		"bluebird": "^3.5.1",
-		"commander": "^2.17.1",
-		"lodash": "^4.17.10",
-		"moment": "^2.22.2",
+		"bluebird": "^3.7.1",
+		"commander": "^4.0.0",
+		"lodash": "^4.17.15",
+		"moment": "^2.24.0",
 		"node-cmd": "^3.0.0"
 	},
 	"devDependencies": {
-		"chai": "^4.1.2",
-		"coveralls": "^3.0.2",
-		"mocha": "^5.2.0",
-		"nyc": "^12.0.2",
+		"chai": "^4.2.0",
+		"coveralls": "^3.0.7",
+		"mocha": "^6.2.2",
+		"nyc": "^14.1.1",
 		"sonarjs": "^1.0.0"
 	}
 }

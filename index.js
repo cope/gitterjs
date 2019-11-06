@@ -17,8 +17,9 @@
 
 const commander = require("commander");
 
+const packageJson = require('./package.json');
 commander
-	.version("0.1.2")
+	.version(packageJson.version)
 	.option("", "")
 	.option("-l, --pull", "Execute git pull recursively in all subfolders", false)
 	.option("-c, --commit", "Execute git commit recursively in all subfolders", false)
