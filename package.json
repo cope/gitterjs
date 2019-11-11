@@ -1,6 +1,6 @@
 {
 	"name": "gitterjs",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"description": "Little git helper",
 	"homepage": "https://github.com/cope/gitterjs#readme",
 	"author": "Predrag Stojadinovic <predrag@stojadinovic.net>",
