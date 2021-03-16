@@ -17,9 +17,10 @@
  *                        Execute git pull recursively in all subfolders
  */
 
-const commander = require("commander");
-
+const _ = require("lodash");
 const packageJson = require('./package.json');
+
+const commander = require("commander");
 commander
 	.version(packageJson.version)
 	.option("", "")
@@ -38,6 +39,8 @@ commander
 commander.pull = true === commander.pull;
 commander.commit = true === commander.commit;
 commander.push = true === commander.push;
+commander.name = _.isString(commander.name) ? commander.name : false;
+commander.email = _.isString(commander.email) ? commander.email : false;
 
 if (!commander.commit && !commander.push && !commander.name && !commander.email) commander.pull = true;
 
