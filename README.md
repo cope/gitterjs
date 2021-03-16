@@ -19,6 +19,8 @@ Shortcut for recursive git pull/commit/push
     -c, --commit           Execute git commit recursively in all subfolders
     -p, --push             Execute git commit and push recursively in all subfolders
     -m, --message [value]  An optional message
+    -n, --name [value]     Execute git config user.name "value" recursively in all subfolders
+    -e, --email [value]    Execute git config user.email "value" recursively in all subfolders
     -v, --verbose          Verbose
 
     <no params>            Same as using -l:

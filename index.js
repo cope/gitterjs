@@ -9,8 +9,8 @@
  * -c, --commit           Execute git commit recursively in all subfolders
  * -p, --push             Execute git commit and push recursively in all subfolders
  * -m, --message [value]  Commit message (optional)
- * -n, --name [value]     Execute git config user.name recursively in all subfolders
- * -e, --email [value]    Execute git config user.email recursively in all subfolders
+ * -n, --name [value]     Execute git config user.name "value" recursively in all subfolders
+ * -e, --email [value]    Execute git config user.email "value" recursively in all subfolders
  * -v, --verbose          Verbose
  *
  * <no params>            Same as using -l:
